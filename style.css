@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f1eb;
+    color: #30251f;
+}
+
+.pagina-login {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+.login-card,
+.card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(45, 30, 20, 0.08);
+    padding: 26px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+}
+
+h1, h2 {
+    margin-top: 0;
+    color: #563b2b;
+}
+
+.subtitulo,
+.dica {
+    color: #74665d;
+}
+
+label {
+    display: block;
+    margin: 14px 0 7px;
+    font-weight: 700;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1px solid #d8cec5;
+    border-radius: 8px;
+    padding: 11px 12px;
+    font: inherit;
+    background: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #c69a6b;
+    border-color: #9a6b45;
+}
+
+.botao {
+    display: inline-block;
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 16px;
+    background: #795239;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;;
+}
+
+.login-card .botao {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.botao:hover {
+    filter: brightness(0.93);
+}
+
+.botao-secundario {
+    background: #6e625a;
+}
+
+.botao-editar {
+    background: #326a56;
+}
+
+.botao-excluir {
+    background: #a43f3f;
+}
+
+.topo {
+    background: #fff;
+    padding: 22px max(20px, calc((100% - 1200px) / 2));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 10px rgba(45, 30, 20, 0.06);
+}
+
+.topo h1 {
+    margin-bottom: 5px;
+}
+
+.topo p {
+    margin: 0;
+    color: #74665d;
+}
+
+.container {
+    width: min(1200px, calc(100% - 32px));
+    margin: 28px auto;
+}
+
+.container-menor {
+    max-width: 650px;
+}
+
+.card {
+    margin-bottom: 24px;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 18px;
+}
+
+.formulario > div {
+    min-width: 0;
+}
+
+.campo-largo {
+    grid-column: 1 / -1;
+    padding-top: 10px;
+}
+
+.alerta {
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin: 0 0 18px;
+}
+
+.sucesso {
+    background: #e5f4e9;
+    color: #245b35;
+}
+
+.erro {
+    background: #fde8e7;
+    color: #8c2727;
+}
+
+.tabela-responsiva {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+th, td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #eee5de;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background: #f8f4ef;
+    color: #563b2b;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.acoes form {
+    margin: 0;
+}
+
+.acoes .botao {
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    .topo {
+        align-items: flex-start;
+        padding: 18px;
+    }
+
+    .topo h1 {
+        font-size: 22px;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-largo {
+        grid-column: auto;
+    }
+
+    .card {
+        padding: 18px;
+    }
+}
